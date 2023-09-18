@@ -29,14 +29,11 @@ result, image = cam.read()
 if result:
 	datetime_now = datetime.now()
 	time_now = str (datetime_now.time())
-	#print(time_now[0:8])
-	#test = "hello"
 	
 	height, width, channels = image.shape
 	w = round(width/2)
 	h = height-20
-	#print(w,h)
-
+	
 	draw_label(image,time_now[0:8], (w,h),'c', (200,213,48))
 	imshow("View",image)
 
