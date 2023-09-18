@@ -7,7 +7,7 @@ result, image = cam.read()
 
 if result:
 	imshow("View",image)
-	imwrite("View",image)
+	imwrite("View.png",image)
 
 	waitKey(0)
 	destroyWindow("View")
