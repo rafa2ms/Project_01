@@ -16,7 +16,7 @@ It was created to apply basic concepts of multiple tools and environments simult
 
 ## Current output features
 - [x] Time of capture <br/>
-- [ ] Face recognition (in development) <br/>
+- [ ] Face detection _(soon)_ <br/>
 
 <img src = "https://github.com/rafa2ms/episodes/blob/main/Final_result.png?raw=true" />
 
@@ -33,3 +33,8 @@ compilation terminated.
 
 ## Improvements 
 As the program is working with no GUI to set parameters, there are many improvement possibilities for the future.
+
+## References
+1. https://www.geeksforgeeks.org/how-to-capture-a-image-from-webcam-in-python/
+2. https://stackoverflow.com/questions/54607447/opencv-how-to-overlay-text-on-video
+3. https://stackoverflow.com/questions/415511/how-do-i-get-the-current-time
