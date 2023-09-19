@@ -9,7 +9,7 @@ It was created to apply basic concepts of multiple tools and environments simult
 - [ ] Run it with Python 3.9 and OpenCV 4.3.0.18 <br/>
 
 ## Requirements
- The code 'scratch.py' was running successfully under the following requirements:
+ The code 'scratch.py' is running successfully under the following requirements:
 - _Ubuntu 22.04 on Windows Subsystem for Linux (WSL2)_
 - _Python: 3.8.18_
 - _OpenCV: 4.0.3.38_
@@ -20,7 +20,8 @@ It was created to apply basic concepts of multiple tools and environments simult
 
 <img src = "https://github.com/rafa2ms/episodes/blob/main/Final_result.png?raw=true" />
 
-## Improvments 
+## Bugs 
+The following error is related to the OpenCV 4.3 installation procedure. As there was another error during the installation from a cloned repository, now I'm trying to build the package. <br/>
 
 ``` bash
 fatal error:
@@ -29,3 +30,6 @@ fatal error:
       |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 compilation terminated.
 ```
+
+## Improvements 
+As the program is working with no GUI to set parameters, there are many improvement possibilities for the future.
