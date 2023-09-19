@@ -12,7 +12,7 @@ It was created to apply basic concepts of multiple tools and environments simult
  The code 'scratch.py' is running successfully under the following requirements:
 - _Ubuntu 22.04 on Windows Subsystem for Linux (WSL2)_
 - _Python: 3.8.18_
-- _OpenCV: 4.0.3.38_
+- _OpenCV: 4.3.0.38_
 
 ## Current output features
 - [x] Time of capture <br/>
