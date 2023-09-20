@@ -24,11 +24,11 @@ This version is an upgrade of the image capture project _(see main branch)_.<br/
 _<Snapshot_at_11-29-13.png - "My three different personalities">_
 
 ## How to use 
-- As soon as you run the script, a new window will open displaying the current capture from the connected webcam.
-- To take a __snapshot__ you should press the "space bar" key.
-   - The file name will be "Snapshot_at_hh-mm-ss.png", where hh-mm-ss stands for the "hour", "minute" and "second" when the capture was done.
-   - It will be saved on the same directory where "face_det_test.py" is running.
-- To __quit the project__ you need to press the "escape" key.
+- As soon as you run the script, a new window will open displaying the webcam feed.
+- To take a __snapshot__, press the "space bar" key.
+   - The file will be saved with the name "Snapshot_at_hh-mm-ss.png", where hh-mm-ss represents the "hour", "minute" and "second" when the capture was done.
+   - It will be saved in the same directory as "face_det_test.py".
+- To __exit the project__, press the "escape" key.
 
 ## References
 1. https://www.geeksforgeeks.org/how-to-capture-a-image-from-webcam-in-python/
