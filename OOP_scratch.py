@@ -41,9 +41,10 @@ class Label:
         elif self.align == 'C':
             pos_x = pos_x - round(txt_size[0][0]/ 2)
 
-        #elif align == 'R':
-        # Assuming that this will be always time-text type
-        #pos_x = pos_x - round(txt_size[0][0]/ 2)
+        '''
+        elif align == 'R':
+            pos_x = pos_x - round(txt_size[0][0]/ 2)
+        '''
         
         end_x = pos_x + txt_size[0][0] + self.margin
         end_y = pos_y - txt_size[0][1] - self.margin
@@ -88,4 +89,4 @@ while True:
 
     k = cv2.waitKey(30) & 0xff
     if k ==27: break
-    if k ==32: imwrite("View.png",image)
+    if k ==32: imwrite("Snapshot.png",image)
