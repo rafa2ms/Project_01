@@ -5,28 +5,57 @@ _Released on the 21th of September of 2023_ <br/>
 
 ## Goals
 - [x] Enhance the main project using OOP
-- [ ] Make it a pyhton package
-- [ ] Add requirements.txt and using steps
+- [x] Make it a pyhton package
+- [x] Add requirements.txt
+
+## How to use
+1. As soon as you run the script, a new window will open displaying the webcam snapshot.
+   - The file will be saved with the name "Snapshot.png".
+   - It will be saved in the same directory as "OOP_scratch.py".
+2. To exit the project, press the "escape" key.
+
+### Example
+The script bellow demonstrates a simple way to import the library and utilize the "time_snapshot()" function. <br/>
+_Note: Using infinite loop may cause issues in your code._
+
+``` python
+import episode01 as ep
+import cv2
+
+ep.time_snapshot()
+
+while True:
+    k = cv2.waitKey(30) & 0xff
+    if k ==27: break
+```
+
 
 ## Requirements
  The code 'OOP_scratch.py' is running successfully under the following requirements:
-- _Ubuntu 22.04 on Windows Subsystem for Linux (WSL2)_
-- _Python: 3.8.18_
-- _OpenCV: 4.3.0.38_
+- Python: 3.8.18
+- OpenCV: 4.3.0.38
+  - numpy==1.24.4
 
 ## Current output features
 - [x] Time of capture <br/>
 - [x] Multiple labels <br/>
 
+## Examples of labeling
+``` python 
+label_1 = Label(text = "OOP provides", txt_color=(0,0,255), scale=0.6)
+label_1.draw_label(image)
+
+label_2 = Label(text = "easier data", pos = (20, 45), margin=5, font_face=cv2.FONT_HERSHEY_TRIPLEX,
+                txt_color=(255,255,255), bg_color=(0,0,255), scale=0.8)
+label_2.draw_label(image)
+
+label_3 = Label(text = "manipulation", pos = (60, 85), margin=10, font_face=cv2.FONT_HERSHEY_SCRIPT_COMPLEX,
+                txt_color=(0, 231, 255), bg_color=(73, 158, 0), scale=1)
+label_3.draw_label(image)
+```
 <img src = "https://github.com/rafa2ms/episodes/blob/oop_scratch/Snapshot.png?raw=true" />
 [Snapshot.png - "Creative mode!"]
 
-## How to use
-- As soon as you run the script, a new window will open displaying the webcam feed.
-- To take a snapshot, press the "space bar" key.
-   - The file will be saved with the name "Snapshot.png".
-   - It will be saved in the same directory as "OOP_scratch.py".
-- To exit the project, press the "escape" key.
 
 ## References
 1. https://www.geeksforgeeks.org/how-to-capture-a-image-from-webcam-in-python/
