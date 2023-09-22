@@ -9,12 +9,14 @@ _Released on the 21th of September of 2023_ <br/>
 - [x] Add requirements.txt
 
 ## How to use
-1. Clone/Dowload this repository to your project folder
+1. Access your virtual environment or _$ cd_ to your project folder
 ``` bash
 $ cd my/project/folder
+```
+2. Clone/Dowload this repository
+``` bash
 $ git clone https://github.com/rafa2ms/episodes.git
 ```
-2. Access your virtual environment or _$ cd_ to your project folder
 3. Install the requirements
 ``` bash
 $ pip install -r requirements.txt
