@@ -80,14 +80,3 @@ def time_snapshot(cam_port = 0):
         print("No image detected. Please, try again.")
 
 
-# As long as the code is not part of a library yet,
-# this infinity loop routine will keep the window open 
-# until the escape key be pressed
-
-# =============================================
-time_snapshot()
-while True:
-    k = cv2.waitKey(30) & 0xff
-    if k ==27: break
-# =============================================
-
