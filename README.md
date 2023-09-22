@@ -9,9 +9,15 @@ _Released on the 21th of September of 2023_ <br/>
 - [x] Add requirements.txt
 
 ## How to use
-1. Import the "episode01" library
-2. Call the function "time_snapshot()"
-3. As soon as you run the script, a new window will open displaying the webcam snapshot.
+1. Clone/Dowload this repository to your project folder
+2. Access your virtual environment or _$ cd_ to your project folder
+3. Install the requirements
+``` bash
+$ pip install -r requirements.txt
+```
+4. In your .py script, import the "episode01" library
+5. Call the function "time_snapshot()"
+6. As soon as you run the script, a new window will open displaying the webcam snapshot.
    - The file will be saved with the name "Snapshot.png".
    - It will be saved in the same directory as your script.
 
