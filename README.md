@@ -10,6 +10,10 @@ _Released on the 21th of September of 2023_ <br/>
 
 ## How to use
 1. Clone/Dowload this repository to your project folder
+``` bash
+$ cd my/project/folder
+$ git clone https://github.com/rafa2ms/episodes.git
+```
 2. Access your virtual environment or _$ cd_ to your project folder
 3. Install the requirements
 ``` bash
