@@ -9,10 +9,12 @@ _Released on the 21th of September of 2023_ <br/>
 - [x] Add requirements.txt
 
 ## How to use
-1. As soon as you run the script, a new window will open displaying the webcam snapshot.
+1. Import the "episode01" library
+2. Call the function "time_snapshot()"
+3. As soon as you run the script, a new window will open displaying the webcam snapshot.
    - The file will be saved with the name "Snapshot.png".
    - It will be saved in the same directory as your script.
-2. To exit the project, press the "escape" key.
+4. To exit the project, press the "escape" key.
 
 ### Example
 The script bellow demonstrates a simple way to import the library and utilize the "time_snapshot()" function. <br/>
