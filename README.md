@@ -11,7 +11,7 @@ _Released on the 21th of September of 2023_ <br/>
 ## How to use
 1. As soon as you run the script, a new window will open displaying the webcam snapshot.
    - The file will be saved with the name "Snapshot.png".
-   - It will be saved in the same directory as "OOP_scratch.py".
+   - It will be saved in the same directory as your script.
 2. To exit the project, press the "escape" key.
 
 ### Example
@@ -31,7 +31,7 @@ while True:
 
 
 ## Requirements
- The code 'OOP_scratch.py' is running successfully under the following requirements:
+ This library is running successfully under the following requirements:
 - Python: 3.8.18
 - OpenCV: 4.3.0.38
   - numpy==1.24.4
@@ -56,6 +56,37 @@ label_3.draw_label(image)
 <img src = "https://github.com/rafa2ms/episodes/blob/oop_scratch/Snapshot.png?raw=true" />
 [Snapshot.png - "Creative mode!"]
 
+## [SOLVED] Video capture error 
+If your cam_port is not 0 (default), the following error will show up:
+``` bash
+[ WARN:0] global /tmp/pip-req-build-gnlqiqil/opencv/modules/videoio/src/cap_v4l.cpp (893) open VIDEOIO(V4L2:/dev/video0): can't open camera by index
+```
+
+### Ubuntu
+1. Ask for video permission
+``` bash
+$ sudo adduser <your.device.name> video
+$ sudo usermod -a --group video <your.device.name>
+```
+
+2. Check your permissions
+``` bash
+$ id -a
+```
+
+3. Copy index from groups (for me it's "1000")
+``` bash
+uid=1000(<your.device.name>) gid=1000(<your.device.name>) groups=1000(<your.device.name>) ...
+```
+
+4. Use that index as the parameter of the _time_snapshot()_ function:
+``` python
+import episode01 as ep
+import cv2
+
+ep.time_snapshot(cam_port=1000)
+```
+Source: https://stackoverflow.com/a/70281742/22612897
 
 ## References
 1. https://www.geeksforgeeks.org/how-to-capture-a-image-from-webcam-in-python/
