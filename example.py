@@ -1,14 +1,14 @@
-import modules as md
+import modules as mod
 import cv2
 import time
 
-result, image = md.init_cam()
+result, image = mod.init_cam()
 
 if result is None:
 	print("No image detected. Please, try again.")
 else:
-	md.time_snapshot(image)
-	md.text_snapshot("Gruezi",image)
+	mod.time_snapshot(image)
+	mod.text_snapshot("Gruezi",image)
 	cv2.imshow("View",image)
 
 	period = 0
