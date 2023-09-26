@@ -15,7 +15,7 @@ $ cd my/project/folder
 ```
 2. Clone/Dowload this repository
 ``` bash
-$ git clone https://github.com/rafa2ms/episodes.git
+$ git clone https://github.com/rafa2ms/project_01.git
 ```
 3. Install the requirements
 ``` bash
