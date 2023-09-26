@@ -1,5 +1,5 @@
 # Episode 01
-### Version 3.0 - Face and time Snapshot using OOP
+### Version 4.0 - Face and time Snapshot using OOP
 This version is an upgrade of the image capture project (see main branch).<br/>
 _Released on the 21th of September of 2023_ <br/>
 
