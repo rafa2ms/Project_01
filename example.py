@@ -1,14 +1,14 @@
-import episode01 as ep
+import modules as md
 import cv2
 import time
 
-result, image = ep.init_cam()
+result, image = md.init_cam()
 
 if result is None:
 	print("No image detected. Please, try again.")
 else:
-	ep.time_snapshot(image)
-	ep.text_snapshot("Gruezi",image)
+	md.time_snapshot(image)
+	md.text_snapshot("Gruezi",image)
 	cv2.imshow("View",image)
 
 	period = 0
