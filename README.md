@@ -8,6 +8,12 @@ _Released on the 26th of September of 2023_ <br/>
 - [x] Make it a pyhton package
 - [x] Add requirements.txt
 
+## Requirements
+ This library is running successfully under the following requirements:
+- Python: 3.8.18
+- OpenCV: 4.3.0.38
+  - numpy==1.24.4
+
 ## How to use
 1. Access your virtual environment or _$ cd_ to your project folder
 ``` bash
@@ -21,8 +27,8 @@ $ git clone https://github.com/rafa2ms/project_01.git
 ``` bash
 $ pip install -r requirements.txt
 ```
-4. In your .py script, import the "episode01" library
-5. Call the function "time_snapshot()"
+4. In your .py script, import the "modules" library
+5. Call the desired functions
 6. As soon as you run the script, a new window will open displaying the webcam snapshot.
    - The file will be saved with the name "Snapshot.png".
    - It will be saved in the same directory as your script.
@@ -31,17 +37,17 @@ $ pip install -r requirements.txt
 The script bellow demonstrates a simple way to import the library and utilize the module functions. <br/>
 
 ``` python
-import modules as md
+import modules as mod
 import cv2
 import time
 
-result, image = md.init_cam()
+result, image = mod.init_cam()
 
 if result is None:
 	print("No image detected. Please, try again.")
 else:
-	md.time_snapshot(image)
-	md.text_snapshot("Gruezi",image)
+	mod.time_snapshot(image)
+	mod.text_snapshot("Gruezi",image)
 	cv2.imshow("View",image)
 
 	period = 0
@@ -60,32 +66,13 @@ else:
 	cv2.imwrite("Snapshot.png",image)
 ```
 
-
-## Requirements
- This library is running successfully under the following requirements:
-- Python: 3.8.18
-- OpenCV: 4.3.0.38
-  - numpy==1.24.4
+## Output
+<img src = "https://github.com/rafa2ms/project_01/blob/oop_enhanced/Snapshot.png?raw=true" />
+[Snapshot.png]
 
 ## Current output features
 - [x] Time of capture <br/>
 - [x] Multiple labels <br/>
-
-## Examples of labeling
-``` python 
-label_1 = Label(text = "OOP provides", txt_color=(0,0,255), scale=0.6)
-label_1.draw_label(image)
-
-label_2 = Label(text = "easier data", pos = (20, 45), margin=5, font_face=cv2.FONT_HERSHEY_TRIPLEX,
-                txt_color=(255,255,255), bg_color=(0,0,255), scale=0.8)
-label_2.draw_label(image)
-
-label_3 = Label(text = "manipulation", pos = (60, 85), margin=10, font_face=cv2.FONT_HERSHEY_SCRIPT_COMPLEX,
-                txt_color=(0, 231, 255), bg_color=(73, 158, 0), scale=1)
-label_3.draw_label(image)
-```
-<img src = "https://github.com/rafa2ms/episodes/blob/oop_scratch/Snapshot.png?raw=true" />
-[Snapshot.png - "Creative mode!"]
 
 ## [SOLVED] Video capture error 
 If your cam_port is not 0 (default), the following error will show up:
