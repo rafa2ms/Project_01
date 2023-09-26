@@ -66,7 +66,7 @@ else:
 	cv2.imwrite("Snapshot.png",image)
 ```
 
-## Output
+### Output
 <img src = "https://github.com/rafa2ms/project_01/blob/oop_enhanced/Snapshot.png?raw=true" />
 [Snapshot.png]
 
