@@ -1,7 +1,7 @@
 # Episode 01
 ### Version 4.0 - Face and time Snapshot using OOP
 This version is an upgrade of the image capture project (see main branch).<br/>
-_Released on the 21th of September of 2023_ <br/>
+_Released on the 26th of September of 2023_ <br/>
 
 ## Goals
 - [x] Enhance the main project using OOP
@@ -28,19 +28,36 @@ $ pip install -r requirements.txt
    - It will be saved in the same directory as your script.
 
 ### Example
-The script bellow demonstrates a simple way to import the library and utilize the "time_snapshot()" function. <br/>
-_Note: Using infinite loop may cause issues in your code._
+The script bellow demonstrates a simple way to import the library and utilize the module functions. <br/>
 
 ``` python
-import episode01 as ep
+import modules as md
 import cv2
+import time
 
-ep.time_snapshot()
+result, image = md.init_cam()
 
-while True:
-    # To exit the project, press the "escape" key.
-    k = cv2.waitKey(30) & 0xff
-    if k ==27: break
+if result is None:
+	print("No image detected. Please, try again.")
+else:
+	md.time_snapshot(image)
+	md.text_snapshot("Gruezi",image)
+	cv2.imshow("View",image)
+
+	period = 0
+	time_initial = time.time()
+	
+	while True:
+		k = cv2.waitKey(30) & 0xff
+		if k == 27: break
+		
+		current_time = time.time()
+		period = current_time - time_initial
+		if period > 2: break
+		
+		time.sleep(1) # avoid excessive CPU usage
+
+	cv2.imwrite("Snapshot.png",image)
 ```
 
 
