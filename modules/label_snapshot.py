@@ -31,7 +31,5 @@ def time_snapshot(image):
 # by default is empty and the position is on the top-left.
 
 def text_snapshot(txt = "", image = ""):
-    text_label = Label(pos = (0,0), scale=0.8, align='L',text = txt)
+    text_label = Label(pos = (0,0), scale=0.8, align='L',text = txt, bg_color = (0,0,0), txt_color = (255,255,255))
     text_label.draw_label(image)
-
-
