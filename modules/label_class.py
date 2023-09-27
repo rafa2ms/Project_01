@@ -33,20 +33,21 @@ class Label:
         txt_size = cv2.getTextSize(self.text, self.font_face, self.scale, self.thickness)
 
         pos_x, pos_y = self.pos
+        txt_length, txt_height = txt_size[0]
 
         if self.align == 'L':
-            pos_x = pos_x + self.margin
-            pos_y = pos_y + txt_size[0][1] + self.margin
-            
+            pos_x += self.margin
+            pos_y += txt_height + self.margin
+
         elif self.align == 'C':
-            pos_x = pos_x - round(txt_size[0][0]/ 2)
+            pos_x -= round(txt_length/2)
 
         elif self.align == 'R':
-            pos_x = pos_x - txt_size[0][0] - self.margin
-            pos_y = pos_y + txt_size[0][1] + self.margin
+            pos_x -= (txt_length + self.margin)
+            pos_y += txt_height + self.margin
 
-        end_x = pos_x + txt_size[0][0] + self.margin
-        end_y = pos_y - txt_size[0][1] - self.margin
+        end_x = pos_x + txt_length + self.margin
+        end_y = pos_y - txt_height - self.margin
 
         return pos_x, pos_y, end_x, end_y 
     
